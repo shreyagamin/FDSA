@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>enter you detials</h1>
+    <form onsubmit=" return displayValues()">
+        <label for="name">NAme:</label>
+        <input type="text" id="name" required>
+        <br><br>
+        <label for="usn">Usn</label>
+        <input type="text" id="usn" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <button>Submit</button>
+    </form>
+    <script>
+        function displayValues(){
+            let name=document.getElementById('name').value;
+            let usn=document.getElementById('usn').value;
+            let email=document.getElementById('email').value;
+            let message="name :"+name+"\n"+"usn :"+usn+"\n"+"email :"+email;
+            alert("entered details :"+message);
+        }
+    </script>
+</body>
+</html>

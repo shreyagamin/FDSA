@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+</head>
+<body id="b">
+    <h1>Pick a background color</h1>
+    <input type="text" id="colorPicker">
+    <script>
+        let i=document.getElementById('colorPicker');
+        i.addEventListener('input',function(){
+            let bd=document.getElementById('b');
+            bd.style.backgroundColor=i.value;
+        });
+    </script>
+    
+</body>
+</html>

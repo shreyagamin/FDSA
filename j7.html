@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password validation</title>
+    <style>
+        form{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 80px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width:300px;
+        }
+        label{
+            display: block;
+            margin-bottom: 8px;
+            color:#333;
+        }
+    </style>
+</head>
+<body>
+   <form onsubmit=" return validPasswords()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <label for="confirmPassword">Confirm Password:</label>      
+    <input type="password" id="confirmPassword" name="confirmPassword">
+    <button>Submit</button>
+   </form> 
+   <script>
+    function validPasswords(){
+        let name=document.getElementById('name').value;
+        let password=document.getElementById('password').value;
+        let confirmPassword=document.getElementById('confirmPassword').value;
+        if(password==""){
+            alert("Password cannot be empty");
+            return false;
+        }
+        else if(password!==confirmPassword){
+            alert("Passwords do not match");
+            return false;
+        }
+        else{
+            alert("crested account successfully");
+            return true;
+        }
+    }
+   
+   </script>
+</body>
+</html>

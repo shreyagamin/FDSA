@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>credit card validation</h1>
+    <input type="text" id="ccnum" placeholder="enter your credit card number">
+    <button onclick="validateCC()">validate</button>
+    <div id="creditCardMessage"></div>
+    <script>
+        function validateCC(){
+            let ccnum=document.getElementById('ccnum').value;
+            const messageDiv=document.getElementById('creditCardMessage');
+            let regex=/^\d{16}$/;
+            if(regex.test(ccnum)){
+                messageDiv.textContent="valid credit card number";
+            }
+            else{
+                messageDiv.textContent="invalid credit card number";
+            }
+        }
+    </script>
+</body>
+
+</html>

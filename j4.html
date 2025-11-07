@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone NUmber validation</title>
+</head>
+<body>
+    <h1>Phone NUmber Validation</h1>
+    <input type="text" id="phoneNumber" placeholder="Enter your phone number">
+    <button onclick="validatePhoneNum()">Validate</button>
+   <div id="message"></div>
+   <script>
+    function validatePhoneNum(){
+        let phoneNumber=document.getElementById('phoneNumber').value;
+        const messageDiv=document.getElementById('message');
+        let regex=/^\d{10}$/;
+        if(regex.test(phoneNumber)){
+            messageDiv.textContent="Valid phone number";
+           
+        }
+        else{
+            messageDiv.textContent="Invalid phone number. Please enter a 10-digit number.";
+           
+        }
+    }
+   </script>
+</body>
+</html>
